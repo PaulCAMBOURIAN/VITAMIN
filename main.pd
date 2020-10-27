@@ -1,3 +1,4 @@
+
 #N canvas 0 60 1920 1020 10;
 #X obj 938 44 ctlin;
 #X floatatom 884 91 5 0 0 0 - - -, f 5;
@@ -229,17 +230,22 @@ box.;
 -1 -1 0 1;
 #X floatatom 117 520 5 0 0 0 - - -, f 5;
 #X obj 128 174 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 0 1;
+
+-1 -1 100 1;
+
+
+
 #X floatatom 119 214 5 0 0 0 - - -, f 5;
-#X obj 376 137 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 407 138 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
+#X obj 376 137 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 407 138 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X text 373 113 on / off;
 #X text 160 221 fréquence de coupure;
 #X text 159 208 Filtre passe bas;
 #X text 158 519 Puissance de sortie;
 #X text 168 376 Niveau minimal d'entrée;
+
 #X obj 292 183 hradio 30 1 0 5 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 122 253 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -4034
@@ -249,13 +255,19 @@ box.;
 #X floatatom 119 285 5 0 0 0 - - -, f 5;
 #X obj 418 249 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -232576
 -1 -1 0 1;
+
 #X floatatom 414 287 5 0 0 0 - - -, f 5;
 #X text 462 278 fréquence d'entrée;
 #X text 461 290 sinus ou créneau;
 #X text 172 396 seuil haut;
 #X floatatom 120 459 5 0 0 0 - - -, f 5;
+
+
 #X obj 123 419 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 -260097
--1 -1 0 1;
+
+-1 -1 800 1;
+
+
 #X text 155 440 Niveau minimal de sortie;
 #X text 281 158 white/pink/sin/squarred/adc;
 #X obj 474 221 r freq;
@@ -270,6 +282,7 @@ box.;
 #X msg 365 745 0;
 #X obj 392 716 / 127;
 #X obj 885 403 route 1 2 3 4 5 6 7 8 9;
+
 #X obj 347 784 *~;
 #X obj 373 832 *~;
 #X obj 369 904 dac~;
@@ -280,8 +293,9 @@ box.;
 #X obj 363 714 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X floatatom 403 773 5 0 0 0 - - -, f 5;
+
 #X obj 740 648 / 127;
-#X floatatom 734 678 5 0 0 0 - - -, f 5;
+#X floatatom 738 679 5 0 0 0 - - -, f 5;
 #X obj 722 746 hip~;
 #X obj 720 774 hip~;
 #X obj 717 806 hip~;
@@ -314,16 +328,21 @@ box.;
 #X obj 683 716 r~ signal;
 #X obj 887 348 r midi;
 #X obj 779 835 s~ filtered_signal;
+
 #X obj 1054 607 / 127;
 #X floatatom 1052 639 5 0 0 0 - - -, f 5;
 #X text 1053 550 freq entrée;
 #X obj 1060 580 * 1000;
 #X obj 1051 673 s freq;
+
 #X obj 393 687 * 1;
+
 #X obj 953 672 / 127;
 #X floatatom 951 703 5 0 0 0 - - -, f 5;
 #X obj 958 646 * 120;
 #X text 949 619 seuil de sortie;
+
+
 #X obj 960 735 s seuil_sortie;
 #X obj 860 740 s seuil_entree;
 #X obj 658 687 s freq_ph;
