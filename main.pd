@@ -71,11 +71,11 @@ in the file;
 1;
 #X obj 44 137 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 178 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 178 135 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 46 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 178 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 178 195 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 178 110 r Sine_01;
 #X obj 179 60 r Whitenoise_01;
@@ -115,7 +115,7 @@ box.;
 #X msg 1726 512 1;
 #X msg 1734 534 0;
 #X obj 1569 567 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 1281 591 s Directsignal_01;
 #X obj 1396 592 s Whitenoise_01;
 #X obj 1495 591 s Pinknoise_01;
@@ -225,12 +225,14 @@ box.;
 #X floatatom 416 377 5 0 0 0 - - -, f 5;
 #X floatatom 119 376 5 0 0 0 - - -, f 5;
 #X obj 124 339 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 -257985
--1 -1 160 1;
+-1 -1 0 1;
 #X obj 125 489 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 100 1;
+-1 -1 0 1;
 #X floatatom 117 520 5 0 0 0 - - -, f 5;
 #X obj 128 174 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 -258113
+
 -1 -1 100 1;
+
 
 
 #X floatatom 119 214 5 0 0 0 - - -, f 5;
@@ -247,7 +249,7 @@ box.;
 #X obj 292 183 hradio 30 1 0 5 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
 #X obj 122 253 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 -4034
--1 -1 100 1;
+-1 -1 0 1;
 #X text 166 288 fréquence de coupure;
 #X text 167 276 Filtre passe haut;
 #X floatatom 119 285 5 0 0 0 - - -, f 5;
@@ -262,7 +264,9 @@ box.;
 
 
 #X obj 123 419 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 -260097
+
 -1 -1 800 1;
+
 
 #X text 155 440 Niveau minimal de sortie;
 #X text 281 158 white/pink/sin/squarred/adc;
@@ -349,14 +353,18 @@ box.;
 #X obj 1503 981 *~;
 #X obj 1491 1048 env~;
 #X floatatom 1491 1075 5 0 0 0 - - -, f 5;
-#X obj 1505 939 squarred~;
 #X obj 1711 899 r freq;
-#X obj 1708 980 *~;
-#X obj 1696 1047 env~;
-#X floatatom 1696 1074 5 0 0 0 - - -, f 5;
-#X obj 1711 938 phasor~;
+#X obj 1704 1006 *~;
+#X obj 1692 1073 env~;
+#X floatatom 1692 1100 5 0 0 0 - - -, f 5;
+#X obj 1710 920 phasor~;
 #X obj 1588 947 r Square_01;
 #X obj 1794 947 r Sawtooth_01;
+#X obj 1505 939 square~;
+#X obj 1710 943 -~ 0.5;
+#X obj 1710 965 *~ 2;
+#X obj 1238 58 env~;
+#X floatatom 1238 81 5 0 0 0 - - -, f 5;
 #X connect 0 0 1 0;
 #X connect 0 0 4 1;
 #X connect 0 1 2 0;
@@ -364,6 +372,7 @@ box.;
 #X connect 0 2 3 0;
 #X connect 4 0 7 0;
 #X connect 5 0 6 0;
+#X connect 5 0 178 0;
 #X connect 5 1 6 0;
 #X connect 9 0 10 0;
 #X connect 11 0 9 0;
@@ -480,13 +489,16 @@ box.;
 #X connect 155 0 158 0;
 #X connect 156 0 154 0;
 #X connect 163 0 36 1;
-#X connect 164 0 168 0;
+#X connect 164 0 175 0;
 #X connect 165 0 166 0;
 #X connect 166 0 167 0;
-#X connect 168 0 165 0;
-#X connect 169 0 173 0;
+#X connect 168 0 172 0;
+#X connect 169 0 170 0;
 #X connect 170 0 171 0;
-#X connect 171 0 172 0;
-#X connect 173 0 170 0;
-#X connect 174 0 165 1;
-#X connect 175 0 170 1;
+#X connect 172 0 176 0;
+#X connect 173 0 165 1;
+#X connect 174 0 169 1;
+#X connect 175 0 165 0;
+#X connect 176 0 177 0;
+#X connect 177 0 169 0;
+#X connect 178 0 179 0;
