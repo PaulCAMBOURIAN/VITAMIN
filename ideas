@@ -2,5 +2,5 @@ Listons quelques idées ici, et quand on de nous le sent de coder ça, on rajout
 .) égaliser en niveau les différentes ondes
 .) contrôler la fréquence de vibration en fonction de la f0 du son (mapping, mise à l'échelle)
 .) contrôler la fréquence de vibration en fonction du centroïde spectral (mapping, mise à l'échelle / voir la toolbox tID pour le calcul)
-.) remarque de Florent : bruit = plus riche, sinus = plus clair & précis : rajouter un réglage pour mixer ça et trouver un compromis ?*
+.) remarque de Florent : bruit = plus riche, sinus = plus clair & précis : rajouter un réglage pour mixer (equal power cross fade) ça et trouver un compromis ?*
 .) maintenir la vibration aussi longtemps que le son (histoire de seuils)
