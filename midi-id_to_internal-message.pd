@@ -1,0 +1,72 @@
+#N canvas 0 66 1920 965 12;
+#X obj -683 10 inlet;
+#X text -640 10 midi message from ctlin;
+#X obj -614 562 outlet;
+#X obj -449 243 textfile;
+#X msg -449 202 read mapping;
+#X msg -476 162 rewind;
+#X obj -449 308 unpack f s;
+#X obj -476 80 loadbang;
+#X obj -476 105 t b b;
+#X obj -305 241 until;
+#X msg -307 161 100;
+#X text -285 217 stops the loop;
+#X text -324 267 outputs the lines as fast as possible;
+#X text -282 156 something large enough in case there's a lot of lines
+in the file;
+#X obj -683 62 unpack f f;
+#X obj -683 127 t b f;
+#X obj -671 206 ==;
+#X obj -425 375 symbol;
+#X obj -671 231 sel 1;
+#X obj -671 256 t b b b;
+#X text -585 303 get 2nd item;
+#X obj -425 400 route symbol;
+#X text -334 399 get rid of 'symbol' prefix;
+#X text -705 172 store for comparison;
+#X text -1086 222 compare the midi control to the 1st item of the current
+entry in file. If the two are equal \, output 1 and then output the
+2nd item of the current entry in file \, that was stored in the symbol
+box.;
+#X text -380 375 store for future use;
+#X text -566 178 go back to;
+#X text -563 195 beginning;
+#X text -563 212 of file;
+#X obj -404 276 t b b;
+#X text -716 100 ctl number;
+#X text -615 100 ctl value;
+#X obj -614 471 pack s f;
+#X text -564 561 list for internal use \, consisting of two elements:
+;
+#X text -562 581 1- ctl number entered \, converted into an internal
+message for triggering events (according to file called 'mapping')
+;
+#X text -561 617 2- the ctl value that followed the ctl number;
+#X obj -614 500 route list;
+#X connect 0 0 14 0;
+#X connect 3 0 6 0;
+#X connect 3 1 29 0;
+#X connect 4 0 3 0;
+#X connect 5 0 3 0;
+#X connect 6 0 16 0;
+#X connect 6 1 17 1;
+#X connect 7 0 8 0;
+#X connect 8 0 5 0;
+#X connect 8 1 4 0;
+#X connect 9 0 3 0;
+#X connect 10 0 9 0;
+#X connect 14 0 15 0;
+#X connect 14 1 32 1;
+#X connect 15 0 10 0;
+#X connect 15 1 16 1;
+#X connect 16 0 18 0;
+#X connect 17 0 21 0;
+#X connect 18 0 19 0;
+#X connect 19 0 5 0;
+#X connect 19 1 17 0;
+#X connect 19 2 9 1;
+#X connect 21 0 32 0;
+#X connect 29 0 5 0;
+#X connect 29 1 9 1;
+#X connect 32 0 36 0;
+#X connect 36 0 2 0;
