@@ -1,4 +1,6 @@
+
 #N canvas 1920 28 1920 1027 10;
+
 #X obj 1355 -103 adc~;
 #X obj 1442 255 noise~;
 #X obj 1440 314 *~;
@@ -28,7 +30,10 @@
 #X floatatom 1097 -69 5 0 0 0 - - -, f 5;
 #X floatatom 1155 -51 5 0 0 0 - - -, f 5;
 #X floatatom 1192 -54 5 0 0 0 - - -, f 5;
+
+
 #N canvas 67 55 1853 1000 controls 1;
+
 #X obj 935 -307 r midi;
 #N canvas 1920 28 1920 1052 debug 0;
 #X obj 43 84 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
@@ -36,7 +41,10 @@
 #X obj 179 85 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 44 137 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+
 #000000 1 1;
+
+
 #X obj 178 135 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 46 195 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -111,6 +119,8 @@
 #X obj 707 75 s threshold-in;
 #X obj 811 74 s threshold-out;
 #X obj 915 74 s vib-f0;
+
+
 #X floatatom 621 115 5 0 0 0 - - -, f 5;
 #X obj 1193 63 route directsignal whitenoise pinknoise sine square
 sawtooth;
@@ -118,6 +128,7 @@ sawtooth;
 threshin threshout vibf0 amplion amplioff, f 139;
 #X obj 987 74 s ampli-on;
 #X obj 1071 72 s ampli-off;
+
 #X connect 0 0 21 0;
 #X connect 2 0 14 0;
 #X connect 3 0 14 0;
@@ -131,6 +142,8 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X connect 11 0 18 0;
 #X connect 12 0 20 0;
 #X connect 13 0 20 0;
+
+
 #X connect 21 0 32 0;
 #X connect 21 0 33 0;
 #X connect 32 0 2 0;
@@ -180,6 +193,8 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X connect 33 7 30 0;
 #X connect 33 8 34 0;
 #X connect 33 9 35 0;
+
+
 #X restore 1093 82 pd controls;
 #X obj 1456 285 r Whitenoise_01;
 #X obj 1470 435 r Pinknoise_01;
@@ -188,31 +203,40 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X obj 1983 920 r Sawtooth_01;
 #X floatatom 727 219 5 0 0 0 - - -, f 5;
 #X obj 732 182 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #f8fc00
+
+
 #000000 #000000 5120 1;
 #X obj 330 599 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 11300 1;
 #X floatatom 296 636 5 0 0 0 - - -, f 5;
 #X obj 417 102 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 #fc0400
 #000000 #000000 2100 1;
+
 #X floatatom 408 142 5 0 0 0 - - -, f 5;
 #X text 449 149 fréquence de coupure;
 #X text 448 136 Filtre passe bas;
 #X text 337 635 Puissance de sortie;
 #X text 776 219 Niveau minimal d'entrée;
 #X obj 127 103 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 #00fc04
+
 #000000 #000000 3200 1;
+
 #X text 171 138 fréquence de coupure;
 #X text 172 126 Filtre passe haut;
 #X floatatom 124 135 5 0 0 0 - - -, f 5;
 #X obj 58 203 hsl 128 15 0 200 0 0 empty empty empty -2 -8 0 10 #e0c4fc
+
 #000000 #000000 4100 1;
+
 #X floatatom 54 241 5 0 0 0 - - -, f 5;
 #X text 102 232 fréquence d'entrée;
 #X text 101 244 sinus ou créneau;
 #X text 785 160 seuil haut;
 #X floatatom 1009 228 5 0 0 0 - - -, f 5;
 #X obj 1012 188 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #fc8000
+
 #000000 #000000 3040 1;
+
 #X text 1044 209 Niveau minimal de sortie;
 #X obj 114 175 r freq;
 #X text 1051 164 seuil bas;
@@ -226,9 +250,11 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X obj 378 791 / 127;
 #X obj 285 860 *~;
 #X obj 359 907 *~;
+
 #X obj 245 934 env~;
 #X floatatom 236 968 5 0 0 0 - - -, f 5;
 #X obj 311 790 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+
 #000000 #000000;
 #X obj 349 789 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -297,6 +323,7 @@ yet if env > seuil_sortie;
 #X obj 285 167 inlet;
 #X obj 245 485 outlet~;
 #X obj 203 168 inlet~;
+
 #X connect 0 0 1 0;
 #X connect 1 0 6 0;
 #X connect 2 0 3 0;
@@ -322,6 +349,7 @@ yet if env > seuil_sortie;
 #X text 70 101 signal;
 #X text 153 97 frequency;
 #X connect 0 0 1 0;
+
 #X connect 1 0 2 0;
 #X connect 2 0 8 0;
 #X connect 3 0 4 0;
@@ -345,10 +373,12 @@ yet if env > seuil_sortie;
 #X obj 294 313 env~;
 #X floatatom 294 337 5 0 0 0 - - -, f 5;
 #N canvas 67 55 1853 1025 seuils 0;
+
 #X obj 263 183 inlet~;
 #X obj 384 181 inlet;
 #X text 389 152 entrée \, seuil haut pour l'entrée;
 #X obj 613 185 inlet;
+
 #X text 618 156 sortie \, seuil bas pour l'entrée;
 #X obj 387 485 env~;
 #X floatatom 299 530 5 0 0 0 - - -, f 5;
@@ -388,6 +418,7 @@ yet if env > seuil_sortie;
 #X connect 18 0 19 0;
 #X connect 19 0 20 0;
 #X connect 20 0 17 0;
+
 #X restore 793 714 pd seuils;
 #X obj 893 656 r seuil_sortie;
 #X obj 67 377 * 200;
@@ -433,6 +464,7 @@ yet if env > seuil_sortie;
 #X obj 325 688 r master-Off;
 #X obj 387 712 r master-Vol;
 #X floatatom 83 324 5 0 0 0 - - -, f 5;
+
 #X floatatom 809 769 5 0 0 0 - - -, f 5;
 #X obj 669 701 env~;
 #X floatatom 667 733 5 0 0 0 - - -, f 5;
@@ -462,6 +494,7 @@ yet if env > seuil_sortie;
 #X connect 6 0 7 0;
 #X connect 7 0 16 0;
 #X connect 7 0 127 0;
+
 #X connect 9 0 6 0;
 #X connect 10 0 11 0;
 #X connect 12 0 13 0;
@@ -471,7 +504,9 @@ yet if env > seuil_sortie;
 #X connect 19 0 21 0;
 #X connect 20 0 19 1;
 #X connect 22 0 23 0;
+
 #X connect 22 0 127 0;
+
 #X connect 23 0 24 0;
 #X connect 25 0 26 0;
 #X connect 30 0 2 1;
@@ -492,6 +527,7 @@ yet if env > seuil_sortie;
 #X connect 63 0 37 0;
 #X connect 64 0 67 1;
 #X connect 65 0 67 1;
+
 #X connect 66 0 73 0;
 #X connect 67 0 68 0;
 #X connect 67 0 133 0;
