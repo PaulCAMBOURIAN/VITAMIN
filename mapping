@@ -4,4 +4,11 @@
 26 sine;
 27 square;
 28 sawtooth;
-
+1 masteron;
+2 masteroff;
+3 mastervol;
+4 cutoffhigh;
+5 cutofflow;
+6 threshin;
+7 threshout;
+8 vibf0;
