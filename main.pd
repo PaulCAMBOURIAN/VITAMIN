@@ -30,10 +30,14 @@
 #X floatatom 1097 -69 5 0 0 0 - - -, f 5;
 #X floatatom 1155 -51 5 0 0 0 - - -, f 5;
 #X floatatom 1192 -54 5 0 0 0 - - -, f 5;
+<<<<<<< HEAD
+#N canvas 67 55 1853 1000 controls 0;
+=======
 
 
 #N canvas 67 55 1853 1000 controls 1;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X obj 935 -307 r midi;
 #N canvas 1920 28 1920 1052 debug 0;
 #X obj 43 84 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
@@ -41,10 +45,14 @@
 #X obj 179 85 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 44 137 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+<<<<<<< HEAD
+#000000 0 1;
+=======
 
 #000000 1 1;
 
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X obj 178 135 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 46 195 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -203,40 +211,60 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X obj 1983 920 r Sawtooth_01;
 #X floatatom 727 219 5 0 0 0 - - -, f 5;
 #X obj 732 182 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #f8fc00
+<<<<<<< HEAD
+#000000 #000000 0 1;
+=======
 
 
 #000000 #000000 5120 1;
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X obj 330 599 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
-#000000 #000000 11300 1;
+#000000 #000000 0 1;
 #X floatatom 296 636 5 0 0 0 - - -, f 5;
 #X obj 417 102 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 #fc0400
+<<<<<<< HEAD
+#000000 #000000 0 1;
+=======
 #000000 #000000 2100 1;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X floatatom 408 142 5 0 0 0 - - -, f 5;
 #X text 449 149 fréquence de coupure;
 #X text 448 136 Filtre passe bas;
 #X text 337 635 Puissance de sortie;
 #X text 776 219 Niveau minimal d'entrée;
 #X obj 127 103 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 #00fc04
+<<<<<<< HEAD
+#000000 #000000 0 1;
+=======
 
 #000000 #000000 3200 1;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X text 171 138 fréquence de coupure;
 #X text 172 126 Filtre passe haut;
 #X floatatom 124 135 5 0 0 0 - - -, f 5;
 #X obj 58 203 hsl 128 15 0 200 0 0 empty empty empty -2 -8 0 10 #e0c4fc
+<<<<<<< HEAD
+#000000 #000000 3175 1;
+=======
 
 #000000 #000000 4100 1;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X floatatom 54 241 5 0 0 0 - - -, f 5;
 #X text 102 232 fréquence d'entrée;
 #X text 101 244 sinus ou créneau;
 #X text 785 160 seuil haut;
 #X floatatom 1009 228 5 0 0 0 - - -, f 5;
 #X obj 1012 188 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #fc8000
+<<<<<<< HEAD
+#000000 #000000 0 1;
+=======
 
 #000000 #000000 3040 1;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X text 1044 209 Niveau minimal de sortie;
 #X obj 114 175 r freq;
 #X text 1051 164 seuil bas;
@@ -249,8 +277,12 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X msg 351 820 0;
 #X obj 378 791 / 127;
 #X obj 285 860 *~;
+<<<<<<< HEAD
+#X obj 361 906 *~;
+=======
 #X obj 359 907 *~;
 
+>>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X obj 245 934 env~;
 #X floatatom 236 968 5 0 0 0 - - -, f 5;
 #X obj 311 790 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
@@ -295,7 +327,7 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X floatatom 1544 898 5 0 0 0 - - -, f 5;
 #X obj 1569 782 phasor~;
 #X obj 1430 774 r Square_01;
-#X obj 1626 814 r Sawtooth_01;
+#X obj 1621 822 r Sawtooth_01;
 #X obj 1347 781 square~;
 #X obj 1569 805 -~ 0.5;
 #X obj 1569 827 *~ 2;
@@ -468,7 +500,7 @@ yet if env > seuil_sortie;
 #X floatatom 809 769 5 0 0 0 - - -, f 5;
 #X obj 669 701 env~;
 #X floatatom 667 733 5 0 0 0 - - -, f 5;
-#X obj 355 979 dac~ 1;
+#X obj 304 1039 dac~ 1;
 #X text 993 808 signal;
 #X obj 1004 834 r~ signal;
 #X obj 1071 872 *~;
@@ -482,6 +514,40 @@ yet if env > seuil_sortie;
 #X obj 1052 715 r ampli-on;
 #X obj 1138 712 r ampli-off;
 #X obj 820 816 line \$1 1;
+#X floatatom 1810 588 5 0 0 0 - - -, f 5;
+#X obj 1890 592 unpack;
+#X floatatom 1890 617 5 0 0 0 - - -, f 5;
+#X floatatom 1939 620 5 0 0 0 - - -, f 5;
+#X obj 1810 612 mtof;
+#X floatatom 1810 637 5 0 0 0 - - -, f 5;
+#X obj 1916 717 unpack;
+#X floatatom 1916 767 0 0 0 0 - - -;
+#X floatatom 1930 744 0 0 0 0 - - -;
+#X obj 1923 657 route 1 2 3 4;
+#X obj 1966 716 unpack;
+#X floatatom 1966 766 0 0 0 0 - - -;
+#X floatatom 1980 743 0 0 0 0 - - -;
+#X obj 2050 716 unpack;
+#X floatatom 2050 766 0 0 0 0 - - -;
+#X floatatom 2064 743 0 0 0 0 - - -;
+#X text 2021 679 number of peaks to output (default 0.);
+#X text 1818 788 amplitude;
+#X obj 1864 609 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1885 853 s freq;
+#X obj 1854 512 r~ signal;
+#X floatatom 1810 684 5 0 0 0 - - -, f 5;
+#X obj 1812 721 line \$1 1;
+#X obj 446 975 dac~ 2;
+#X obj 417 938 *~, f 4;
+#X obj 465 930 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
+#X obj 1810 659 / 2;
+#X obj 304 1013 *~, f 4;
+#X obj 352 1005 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 358 976 loadbang;
+#X obj 1855 549 fiddle~ 4096 1 20 3;
 #X connect 0 0 114 0;
 #X connect 0 0 126 0;
 #X connect 0 1 114 0;
@@ -532,7 +598,8 @@ yet if env > seuil_sortie;
 #X connect 67 0 68 0;
 #X connect 67 0 133 0;
 #X connect 68 0 69 0;
-#X connect 68 0 183 0;
+#X connect 68 0 220 0;
+#X connect 68 0 223 0;
 #X connect 69 0 70 0;
 #X connect 71 0 64 0;
 #X connect 72 0 65 0;
@@ -633,3 +700,30 @@ yet if env > seuil_sortie;
 #X connect 193 0 191 0;
 #X connect 194 0 192 0;
 #X connect 195 0 80 1;
+#X connect 196 0 200 0;
+#X connect 197 0 198 0;
+#X connect 197 1 199 0;
+#X connect 200 0 201 0;
+#X connect 201 0 222 0;
+#X connect 202 0 203 0;
+#X connect 202 1 204 0;
+#X connect 205 0 202 0;
+#X connect 205 1 206 0;
+#X connect 205 2 209 0;
+#X connect 206 0 207 0;
+#X connect 206 1 208 0;
+#X connect 209 0 210 0;
+#X connect 209 1 211 0;
+#X connect 216 0 226 0;
+#X connect 217 0 218 0;
+#X connect 218 0 215 0;
+#X connect 220 0 219 0;
+#X connect 221 0 220 1;
+#X connect 222 0 217 0;
+#X connect 223 0 183 0;
+#X connect 224 0 223 1;
+#X connect 225 0 224 0;
+#X connect 226 0 196 0;
+#X connect 226 1 214 0;
+#X connect 226 2 197 0;
+#X connect 226 4 205 0;
