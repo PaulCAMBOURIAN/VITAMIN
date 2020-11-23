@@ -30,14 +30,10 @@
 #X floatatom 1097 -69 5 0 0 0 - - -, f 5;
 #X floatatom 1155 -51 5 0 0 0 - - -, f 5;
 #X floatatom 1192 -54 5 0 0 0 - - -, f 5;
-<<<<<<< HEAD
-#N canvas 67 55 1853 1000 controls 0;
-=======
-
 
 #N canvas 67 55 1853 1000 controls 1;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
+
 #X obj 935 -307 r midi;
 #N canvas 1920 28 1920 1052 debug 0;
 #X obj 43 84 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000 #000000
@@ -45,14 +41,10 @@
 #X obj 179 85 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 44 137 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-<<<<<<< HEAD
-#000000 0 1;
-=======
-
 #000000 1 1;
 
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
+
 #X obj 178 135 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 46 195 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -211,60 +203,45 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X obj 1983 920 r Sawtooth_01;
 #X floatatom 727 219 5 0 0 0 - - -, f 5;
 #X obj 732 182 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #f8fc00
-<<<<<<< HEAD
-#000000 #000000 0 1;
-=======
 
 
 #000000 #000000 5120 1;
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
+
 #X obj 330 599 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 #fcfcfc
 #000000 #000000 0 1;
 #X floatatom 296 636 5 0 0 0 - - -, f 5;
 #X obj 417 102 hsl 128 15 0 1000 0 0 empty empty empty -2 -8 0 10 #fc0400
-<<<<<<< HEAD
-#000000 #000000 0 1;
-=======
+
 #000000 #000000 2100 1;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
+
 #X floatatom 408 142 5 0 0 0 - - -, f 5;
 #X text 449 149 fréquence de coupure;
 #X text 448 136 Filtre passe bas;
 #X text 337 635 Puissance de sortie;
 #X text 776 219 Niveau minimal d'entrée;
 #X obj 127 103 hsl 128 15 0 50 0 0 empty empty empty -2 -8 0 10 #00fc04
-<<<<<<< HEAD
-#000000 #000000 0 1;
-=======
+
 
 #000000 #000000 3200 1;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
+
 #X text 171 138 fréquence de coupure;
 #X text 172 126 Filtre passe haut;
 #X floatatom 124 135 5 0 0 0 - - -, f 5;
 #X obj 58 203 hsl 128 15 0 200 0 0 empty empty empty -2 -8 0 10 #e0c4fc
-<<<<<<< HEAD
-#000000 #000000 3175 1;
-=======
 
 #000000 #000000 4100 1;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X floatatom 54 241 5 0 0 0 - - -, f 5;
 #X text 102 232 fréquence d'entrée;
 #X text 101 244 sinus ou créneau;
 #X text 785 160 seuil haut;
 #X floatatom 1009 228 5 0 0 0 - - -, f 5;
 #X obj 1012 188 hsl 128 15 0 150 0 0 empty empty empty -2 -8 0 10 #fc8000
-<<<<<<< HEAD
-#000000 #000000 0 1;
-=======
 
 #000000 #000000 3040 1;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X text 1044 209 Niveau minimal de sortie;
 #X obj 114 175 r freq;
 #X text 1051 164 seuil bas;
@@ -277,12 +254,8 @@ threshin threshout vibf0 amplion amplioff, f 139;
 #X msg 351 820 0;
 #X obj 378 791 / 127;
 #X obj 285 860 *~;
-<<<<<<< HEAD
-#X obj 361 906 *~;
-=======
 #X obj 359 907 *~;
 
->>>>>>> ab2b9682e358e691320121fadd083f377657ac73
 #X obj 245 934 env~;
 #X floatatom 236 968 5 0 0 0 - - -, f 5;
 #X obj 311 790 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
