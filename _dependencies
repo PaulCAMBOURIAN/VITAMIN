@@ -1,2 +1,9 @@
 Requires the following pd libraries:
-- cyclone
+- cyclone (pink~)
+- zexy (mux~, time)
+- vbap (vbap)
+- mrpeach (packOSC, udpsend, udpreceive)
+
+Requires the following packages
+- ladspa (for plugin~)
+- ladspa-sdk (for plugin~)
