@@ -4,3 +4,6 @@ $ purr-data -inchannels 1 -outchannels 2 -send "filename <path/to/name>" -send "
 
 # Note
 abstraction "midi-id_to_internal-message.pd" reads in file "mapping". All other files prefixed with "mapping" are backup files. Consider copying one of them and rename as "mapping" to use any particular mapping.
+
+# Visualize a participant's actions
+$ purr-data -send "filename <path/to/name>" results-visualizer.pd 
